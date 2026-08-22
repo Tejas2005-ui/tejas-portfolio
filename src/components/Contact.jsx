@@ -24,15 +24,16 @@ function Contact() {
     setLoading(true);
     setStatus("");
 
-    try {
-      const response = await fetch("https://tejas-portfolio-backend.onrender.com/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
+   try {
+        const response = await fetch("https://tejas-portfolio-backend.onrender.com/api/contact", 
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
       const data = await response.json();
 
       if (data.success) {
