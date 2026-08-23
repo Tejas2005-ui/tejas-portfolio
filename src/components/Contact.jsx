@@ -24,8 +24,9 @@ function Contact() {
     setLoading(true);
     setStatus("");
 
-   try {
-        const response = await fetch("https://tejas-portfolio-backend.onrender.com/api/contact", 
+    try {
+      const response = await fetch(
+        "https://tejas-portfolio-backend.onrender.com/api/contact",
         {
           method: "POST",
           headers: {
@@ -34,7 +35,10 @@ function Contact() {
           body: JSON.stringify(formData),
         }
       );
+
       const data = await response.json();
+
+      // Keep loading visible for 2 seconds
       await new Promise((resolve) => setTimeout(resolve, 2000));
 
       if (data.success) {
@@ -62,11 +66,11 @@ function Contact() {
       <h2>Contact Me</h2>
 
       {loading && (
-  <div className="contact-loading">
-    <div className="loading-spinner"></div>
-    <p>Sending your message...</p>
-  </div>
-)}
+        <div className="contact-loading">
+          <div className="loading-spinner"></div>
+          <p>Sending your message...</p>
+        </div>
+      )}
 
       <form onSubmit={handleSubmit}>
         <input
@@ -104,18 +108,20 @@ function Contact() {
           required
         />
 
-       <button type="submit" disabled={loading} className="send-btn">
-  {loading ? (
-    <>
-      <span className="loader"></span>
-      Sending...
-    </>
-  ) : (
-    <>
-      Send Message ↗
-    </>
-  )}
-</button>
+        <button
+          type="submit"
+          disabled={loading}
+          className="send-btn"
+        >
+          {loading ? (
+            <>
+              <span className="loader"></span>
+              Sending...
+            </>
+          ) : (
+            <>Send Message ↗</>
+          )}
+        </button>
 
         {status && <p>{status}</p>}
       </form>
