@@ -562,7 +562,7 @@ function App() {
                   </a>
 
                   <a
-                    href="https://github.com/"
+                    href="https://github.com/Tejas2005-ui/tejas-portfolio"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="project-secondary-btn"
