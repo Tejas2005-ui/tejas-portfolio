@@ -60,6 +60,13 @@ function Contact() {
     <section id="contact">
       <h2>Contact Me</h2>
 
+      {loading && (
+  <div className="contact-loading">
+    <div className="loading-spinner"></div>
+    <p>Sending your message...</p>
+  </div>
+)}
+
       <form onSubmit={handleSubmit}>
         <input
           type="text"
