@@ -96,9 +96,18 @@ function Contact() {
           required
         />
 
-        <button type="submit" disabled={loading}>
-          {loading ? "Sending..." : "Send Message"}
-        </button>
+       <button type="submit" disabled={loading} className="send-btn">
+  {loading ? (
+    <>
+      <span className="loader"></span>
+      Sending...
+    </>
+  ) : (
+    <>
+      Send Message ↗
+    </>
+  )}
+</button>
 
         {status && <p>{status}</p>}
       </form>
