@@ -35,6 +35,7 @@ function Contact() {
         }
       );
       const data = await response.json();
+      await new Promise((resolve) => setTimeout(resolve, 2000));
 
       if (data.success) {
         setStatus("Message sent successfully! ✅");
