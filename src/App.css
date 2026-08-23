@@ -5290,3 +5290,53 @@ section:not(#home) h2 {
     transform: rotate(360deg);
   }
 }
+/* Send button loading state */
+.send-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.send-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* Spinner inside button */
+.loader {
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(255, 255, 255, 0.35);
+  border-top: 3px solid #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Optional loading message */
+.contact-loading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.loading-spinner {
+  width: 22px;
+  height: 22px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid #8b5cf6;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
