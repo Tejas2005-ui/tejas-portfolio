@@ -58,12 +58,11 @@ function Navbar() {
 
           {/* GitHub */}
           <a
-            href="https://github.com/"
+
+            href="https://github.com/Tejas2005-ui/tejas-portfolio"
             target="_blank"
-            rel="noopener noreferrer"
-            className="icon-btn"
-            aria-label="GitHub"
-          >
+            rel="noopener noreferrer">
+
             <FaGithub size={19} />
           </a>
 
@@ -75,7 +74,7 @@ function Navbar() {
             className="icon-btn"
             aria-label="LinkedIn"
           >
-            <FaLinkedinIn    size={19} />
+            <FaLinkedinIn size={19} />
           </a>
 
           {/* Theme */}
@@ -126,7 +125,7 @@ function Navbar() {
           <a href="#contact" onClick={closeMenu}>
             Contact
           </a>
-          
+
         </div>
       )}
     </header>
