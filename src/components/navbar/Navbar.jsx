@@ -68,7 +68,7 @@ function Navbar() {
 
           {/* LinkedIn */}
           <a
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com/in/tejas-patil-a58474228"
             target="_blank"
             rel="noopener noreferrer"
             className="icon-btn"
